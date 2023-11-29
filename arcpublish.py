@@ -19,7 +19,7 @@ clientID = 'Put your own here'
 clientSecret = 'Put your own here'
 
 print('()==============================================================()')
-print('|            Arcpublish 1.0: Feature layer updater               |')
+print('|              ArcUpdate1.0: Feature layer updater               |')
 print('()==============================================================()')
 print('| Authored and maintained by Robert Procter     GPL-3.0 license  |')
 print('|                                                                |')
@@ -118,3 +118,4 @@ new_csv.publish(overwrite=True)
 print('Successfully updated layer')
 
 #Kill program to end
+

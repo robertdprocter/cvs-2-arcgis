@@ -25,8 +25,28 @@ Python modules:
 - requests: in order to access APIs and request contents.
 - pandas: handles API data as a dataframe and outputs to csv.
 - arcgis: interacts with ArcGIS website
-- convertbng: used in the Thames Water API to convert coordinates from British National Grid to WGS 1984, necessary for plotting on ArcGIS online.
+- convertbng: used in the Thames Water API to convert coordinates from British National Grid to WGS 1984, necessary for plotting on ArcGIS online. Very cool, I hope they continue to support it.
 
 UPLOADING PROJECT TOMORROW!
 
 Many thanks to Thames Water for making the initial data online available through their API, all the module and software developers, the ArcGIS documentation, as well as the online python community.
+
+**Instructions**
+Currently just to run the python script for updating an already published layer.
+1. Install Python 3.11.6, disable path limits on last step on installation on Windows.  3.11.6 is necessary as convertbng is not yet updated to run on 3.12
+2. Command prompt: py -m pip install requests
+3. Command prompt: py -m pip install pandas
+4. Command prompt: py -m pip install convertbng
+5. Download anaconda installer for Windows from https://www.anaconda.com/download
+6. Open Environments in Navigator, then open the base terminal
+7. In that terminal run: "conda install -c esri arcgis" , say yes to downgrading packages if necessary.
+8. and: "pip install convertbng"
+9. Update index, check ArcGIS is there
+10. Run the python script through the base environment of anaconda. I've automated it using the below text in a bat file to activate the environment and then run the python script on it.
+
+.bat file contents:
+CALL C:\Users\User\anaconda3\condabin\activate.bat
+cd "C:\Users\User\Desktop\ArcPublish
+python arcpublish.py
+
+Enjoy!
